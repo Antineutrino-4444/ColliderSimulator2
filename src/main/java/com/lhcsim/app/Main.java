@@ -10,10 +10,15 @@ public final class Main {
     }
 
     public static void main(String[] args) {
-        LOG.info("Starting ColliderSimulator2 skeleton");
+        LOG.info("Starting ColliderSimulator2");
+
         LhcSimulatorApp app = new LhcSimulatorApp();
         app.boot();
         app.runForTicks(5);
-        LOG.info("Simulator skeleton finished startup run");
+
+        ConsoleGameRunner runner = new ConsoleGameRunner();
+        runner.playCampaign(120);
+
+        LOG.info("ColliderSimulator2 run completed");
     }
 }
